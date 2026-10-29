@@ -43,3 +43,49 @@ src/finalsystem/
 Developed collaboratively as part of a six-member university group project for the Advanced Programming module.
 
 This repository showcases the project's Java source code and its use of software engineering concepts.
+
+## Example Output
+
+The application demonstrates role-based access control by checking whether different users can perform operations on protected resources.
+
+Examples include:
+
+- **GUEST:** Can read lecture materials but cannot read exam papers.
+- **STUDENT:** Can read the printer queue but cannot write to it.
+- **STAFF:** Can read exam papers but cannot modify them.
+- **ADMIN:** Can read and modify exam papers.
+
+Each access attempt produces a timestamped log containing the user ID, role, resource, requested operation, and access decision (`ALLOW` or `REFUSE`).
+
+## Running the Application
+
+1. Install Java 21 or a compatible JDK.
+2. Open the project in Eclipse.
+3. Configure the project's Java build path if necessary.
+4. Navigate to `src/finalsystem/app/FinalSystemRunner.java`.
+5. Right-click the file and select **Run As → Java Application**.
+6. View the access-control results in the Eclipse Console.
+
+**Note:** JUnit 5 must also be configured separately to run the project's unit tests.
+
+## Testing
+
+The project includes automated unit tests using **JUnit 5**.
+
+The tests exercise access-control decisions involving different user roles, resources, and operations.
+
+**Test results:**
+- Tests executed: 6
+- Tests passed: 6
+- Failures: 0
+- Errors: 0
+
+All six tests passed during local execution in Eclipse using JUnit 5.
+
+### Running the Tests
+
+1. Open the project in Eclipse.
+2. Ensure JUnit 5 is configured in the project's build path.
+3. Navigate to `src/finalsystem/tests/Finalsystemtest.java`.
+4. Right-click the file and select **Run As → JUnit Test**.
+5. View the results in Eclipse's JUnit panel.
